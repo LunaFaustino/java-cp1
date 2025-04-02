@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto"
+<html lang="pt-BR" data-bs-theme="auto"
 xmlns:th="http://www.thymeleaf.org">
   <head>
 
@@ -46,21 +46,21 @@ xmlns:th="http://www.thymeleaf.org">
         <li>
           <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
             <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
+            <span th:text="#{toggle.claro}"></span>
             <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
           </button>
         </li>
         <li>
           <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
             <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
+            <span th:text="#{toggle.escuro}"></span>
             <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
           </button>
         </li>
         <li>
           <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
             <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
+            <span th:text="#{toggle.auto}"></span>
             <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
           </button>
         </li>
@@ -71,7 +71,7 @@ xmlns:th="http://www.thymeleaf.org">
 <main class="form-signin w-100 m-auto">
   <form action="#" th:action="@{/consultation/start}" th:object="${patientLazy}" method="post">
     <img class="mb-4" src="/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Novo atendimento</h1>
+    <h1 class="h3 mb-3 fw-normal"></h1>
 
     <div class="form-floating">
       <input type="text" class="form-control" id="cpf" name="cpf" placeholder="123.456.789-10" th:value="*{cpf}">
